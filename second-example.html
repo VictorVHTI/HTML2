@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ejercico 02</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+    <div class="flex-container">
+        <header class="item">
+          <h1>Header</h1>
+          <nav>
+            <ul>
+              <li>Lopper</li>
+              <li>Home</li>
+              <li>Services</li>
+              <li>Work</li>
+              <li>About</li>
+              <li> (01) 666 - 693 - 456</li>
+            </ul>
+          </nav>
+        </header>
+        <header class="item">
+            <img src="img/img01.jpg" height="100%">
+        </header>
+        <section id="cuerpo" class="item">Cuerpo</section>
+        <aside class="item div-pink">
+			<img src="img/img02.jpg" width="100%">
+		</aside>
+        <footer class="item div-purple">Pie
+			<form id="frm-get-in">
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur nulla, sint voluptates dicta provident nostrum placeat dolor cupiditate dolorem, hic accusamus vero sunt labore veniam fuga quia. Aliquam, doloremque obcaecati!
+				<button>enviar</button>
+			</form>
+
+		</footer>		
+    </div>
+
+    
+    
+</body>
+</html>
+
+ <style>
+	 *{
+		 margin: 0px;
+		 padding: 0px;
+	 }
+     .flex-container{
+	width:100%;
+	max-width:1440px;
+	min-width:320px;
+	margin:20px auto;		
+	display: flex;  	
+	flex-flow: row wrap; 	
+	justify-content: center ; 
+	align-items: center ; 	
+	align-content: stretch; 
+	
+}
+
+
+#frm-get-in{
+	position: absolute;
+	width: 90%;
+	background: red;
+	margin-left: 5%;
+	top: -100px;
+	z-index: 2000;
+}
+
+.item{
+	color:#fff;
+	text-align:center;
+	margin:0 auto;
+	font-size:25px;
+}
+
+.div-pink, 
+.div-purple{
+	position: relative;
+}
+	.div-pink img{
+		position: absolute;
+		left: 0;
+		z-index: 1000;
+	}
+header{
+	height:200px;
+	background-color:#fff;
+	overflow:hidden;
+	text-align:center;
+	
+	flex: 1 100%;
+}
+
+header h1{
+	line-height:100px;
+	margin:0;
+	font-size:35px;
+	float:left;
+	width:40%;
+	padding-left:20px;
+	box-sizing:border-box;
+}
+header nav{
+	float:left;
+	width:60%;
+	line-height:100px;
+	padding-right:20px;
+	box-sizing:border-box;
+}
+header ul{
+	list-style-type:none;	 		
+	margin:0;
+	padding:0;	
+	
+	display:flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;  
+}
+header ul li{
+	margin:0 5px;	
+	font-size:20px;	
+	cursor:pointer;
+	color:#D5C5C5;
+}
+header ul li:hover{
+	color:#fff;
+}
+#cuerpo{	
+	/*background-color:tomato;*/
+	height:500px;
+	width:50%;
+
+	line-height:500px;
+	
+	flex: 4 auto;
+}
+aside{
+	background-color: #F61067;
+	height:500px;
+	line-height:500px;
+	width:50%;
+	
+	flex: 1 auto;
+	
+}
+footer{
+	height:720px;
+	line-height:100px;
+	background-color: #150433;
+	width:30%;
+	flex: 1 auto;
+}
+
+@media screen and (max-width: 600px) {
+	
+	header nav{
+		line-height:31px;
+	}
+	header ul{	
+	 	flex-flow: column wrap;	
+	 	align-items: center; 
+	 	justify-content: center;  	
+	}
+	header ul li{
+		margin-bottom:2px;
+	}
+	
+	
+	header{
+		order:0;
+	}
+	
+	#cuerpo{
+		flex: 1 100%;
+		order:2;		
+	}
+	
+	aside{
+		flex: 1 100%;
+		order:1;		
+	}
+	
+	footer{
+		order:3;
+	}
+
+}
+</style>
